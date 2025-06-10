@@ -2,11 +2,6 @@ import pandas as pd
 import yfinance as yf
 from datetime import datetime, timedelta
 import pymssql  # changed from pyodbc to pymssql
-from airflow import DAG  # type: ignore
-from airflow.operators.dummy_operator import DummyOperator  # type: ignore
-from airflow.operators.python_operator import PythonOperator  # type: ignore
-from airflow.operators.bash_operator import BashOperator  # type: ignore
-
 
 def create_connection():
     try:
